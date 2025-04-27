@@ -1,0 +1,29 @@
+# What’s Happening:
+# 1. We made a blueprint with class TeddyBear.
+# 2. We told Python how to build bears with __init__.
+# 3. We made two bears using that blueprint.
+# 4. Each bear can hug and remember its own color and size.
+
+
+class TeddyBear:
+    def __init__(self, colour, size):
+        self.colour = colour                  # self.name = name → saves the name inside that toy here colour
+        self.size = size
+
+    def hug(self):
+        print("Soft hug!")
+
+# Let's make some teddy bears!
+bear1 = TeddyBear("brown", "big")
+bear2 = TeddyBear("pink", "small")
+
+# Let’s hug them!
+bear1.hug()   # prints: Soft hug!
+bear2.hug()   # prints: Soft hug!
+
+# Let's check what they look like
+print(bear1.colour)  # brown
+print(bear2.size)   # small
+
+# 🧸 What is self? Each teddy bear has a name tag that says: “Hi! I’m this specific bear.”
+# self is in Python — it's the tag that helps each bear (or any object) remember: What they look like, What they can do, etc.
