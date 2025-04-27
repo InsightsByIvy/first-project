@@ -1,11 +1,13 @@
 # RANDOM WORKOUT GENERATOR
 
+![Banner](RANDOM_WORKOUT_GENERATOR.png)
+
 ## Description
 The RANDOM WORKOUT GENERATOR project is a Python-based application designed to create diverse and engaging workout routines. Whether you're aiming for a quick 10-minute session or a comprehensive 60-minute workout, this tool ensures variety and adaptability to keep your fitness journey exciting.
 
 ## Features:
  - Exercise Variety: Incorporates a wide range of exercises to target different muscle groups.
- - User Preferences: Options to choose between specific exercise types (e.g., cardio, strength, yoga).
+ - User Preferences: Options to choose between specific exercise types (cardio, strength, yoga).
 
 
  ## Usage
