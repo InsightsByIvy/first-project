@@ -4,15 +4,15 @@
 import random
 
 #List of strenght exercises
-strengh_exercises = ["Push-ups", "Pull-ups", "Squats", "Lunges", "Plank", "Bicep Curls", 
+strength_exercises = ["Push-ups", "Pull-ups", "Squats", "Lunges", "Plank", "Bicep Curls", 
                      "Tricep Dips", "Crunches", "Russian Twists", "Glute Bridges", "Side Plank", "Plank Shoulder Taps"]
 
 #List of cardio exercises
-cardio_exerciese = ["Jump Rope", "Running", "Burpees", "Jumping Jacks", "Mountain Climber",
+cardio_exercises = ["Jump Rope", "Running", "Burpees", "Jumping Jacks", "Mountain Climber",
                     "High Knees", "Jumping Lunges", "Squat Jumps"]
 
 # Yoga exercises
-yoga_exercises = ["Downward Facing Dog", "Child's Pose", "Triangle Pose", "Warrior I", "Warrior II", "Cobra Pose", "Bridge Pose"
+yoga_exercises = ["Downward Facing Dog", "Child's Pose", "Triangle Pose", "Warrior I", "Warrior II", "Cobra Pose", "Bridge Pose",
                   "Lotus Pose", "Extended Side Angle", "Standing Forward Bend", "Reverse Warrior", "Pyramid Pose", "Low Lunge",
                    "Tree Pose", "Cat-Cow Stretch", "Seated Forward Bend", "Happy Baby Pose", "Supine Spinal Twist"]
 
@@ -29,9 +29,9 @@ def get_user_input():
 #Generate random workout
 def generate_workout(choice):
     if choice == "1":
-        workout = random.sample(strengh_exercises, 5)
+        workout = random.sample(strength_exercises, 5)
     elif choice == "2":
-        workout = random.sample(cardio_exerciese, 5)
+        workout = random.sample(cardio_exercises, 5)
     elif choice == "3":
         workout = random.sample(yoga_exercises, 5)
     else:
@@ -44,8 +44,8 @@ def generate_workout(choice):
 def display_workout(workout):
     if workout:
         print("Your workout routine for today:")
-        for i, excercise in enumerate(workout, start=1):
-            print(f"{i}. {excercise}")
+        for i, exercise in enumerate(workout, start=1):
+            print(f"{i}. {exercise}")
         print("Let's get started!")
     else:
         print("No workout generated. Please try again.")
@@ -62,7 +62,7 @@ def main():
             display_workout(workout)
 
         again = input("Would you like another workout? (Yes/No): ").strip().lower()
-        if again != "yes":
+        if again not in ["yes", "y"]:
             print("Thank you for using the Workout Generator! Stay fit! ")
             break
 
